@@ -1,0 +1,87 @@
+// -------------------------------------
+//   variables
+// -------------------------------------
+$baseMargin: 10px;
+$baseFontSize: 16px;
+$smallFontSize: 12px;
+
+$white: #FFFFFF;
+$backgroundColor: #8BB9E0;
+
+// -------------------------------------
+//   styles
+// -------------------------------------
+html {
+	margin: $baseMargin;
+}
+
+body {
+  	margin: 0;
+  	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    background-color: $backgroundColor;
+
+}
+
+code {
+  	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.weather__wrapper {
+	//border: 1px solid;
+	padding: $baseMargin;
+	margin: $baseMargin 0;
+}
+
+.weather__app--title {
+	color: $white;
+}
+
+.weather__city--title {
+	display: inline-block;
+}
+
+.weather__city--remove {
+	margin-left: $baseMargin;
+	font-size: $smallFontSize;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.weather__day {
+	border: 1px solid $white;
+	margin: $baseMargin;
+	padding: $baseMargin;
+	display: none;
+	cursor: pointer;
+
+	.weather__day--details {
+		display: none;
+	}
+
+	&.selected,
+	&.opened {
+		display: block;
+	}
+
+	&.opened {
+		.weather__day--details {
+			display: block;
+			
+		}
+	}
+}
+
+.zipcode__input {
+	position: relative;
+	width: 100%;
+	margin-bottom: $baseMargin;
+	padding: $baseMargin;
+    box-sizing: border-box;
+}
+
+.weather__day-title {
+	font-size: $baseFontSize;
+}
